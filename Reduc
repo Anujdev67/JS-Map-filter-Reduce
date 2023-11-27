@@ -1,0 +1,15 @@
+const users=[
+{fName:"anuj",lName:"sen",age:26},
+{fName:"arun",lName:"Singrole",age:27},
+{fName:"aditya",lName:"Mishra",age:50}
+];
+//acc =  {26:1,27:1,50:1}
+const output = users.reduce(function(acc,curr){
+if(acc[curr.age]){
+acc[curr.age] = ++acc[curr.age];
+}else{
+acc[curr.age]=1;
+}
+return acc;
+},{});
+console.log(output);
